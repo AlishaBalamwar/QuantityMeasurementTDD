@@ -46,4 +46,10 @@ public class QuantityMeasurementTest {
     	QuantityMeasurement feet = new QuantityMeasurement(QuantityMeasurementUnit.FEET,1.0);
         Assert.assertEquals(feet,new QuantityMeasurement(QuantityMeasurementUnit.FEET,1.0));
     }
+    
+    @Test
+    public void whenGiven0FeetAnd0Yard_shouldReturnEquals() {
+    	QuantityMeasurement feet = new QuantityMeasurement(QuantityMeasurementUnit.FEET, 0.0);
+        Assert.assertEquals(feet, new QuantityMeasurement(QuantityMeasurementUnit.YARD, 0.0));
+    }
 }
