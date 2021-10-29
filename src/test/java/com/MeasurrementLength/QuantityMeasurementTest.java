@@ -76,4 +76,10 @@ public class QuantityMeasurementTest {
     	QuantityMeasurement yard = new QuantityMeasurement(QuantityMeasurementUnit.YARD,1.0);
         Assert.assertEquals(yard, new QuantityMeasurement(QuantityMeasurementUnit.INCH, 36.0));
     }
+    
+    @Test
+    public void whenGiven36InchAnd1Yard_shouldReturnEquals() {
+    	QuantityMeasurement inch = new QuantityMeasurement(QuantityMeasurementUnit.INCH,36.0);
+        Assert.assertEquals(inch, new QuantityMeasurement(QuantityMeasurementUnit.YARD, 1.0));
+    }
 }
