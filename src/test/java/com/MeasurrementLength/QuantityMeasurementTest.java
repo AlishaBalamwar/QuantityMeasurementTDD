@@ -29,4 +29,9 @@ public class QuantityMeasurementTest {
         Assert.assertEquals(inch,new QuantityMeasurement(QuantityMeasurementUnit.INCH, 0.0));
     }
 
+    @Test
+    public void whenGivenTwoDifferentInchObjects_shouldReturnFalse() {
+    	QuantityMeasurement inch = new QuantityMeasurement(QuantityMeasurementUnit.INCH, 0.0);
+        Assert.assertNotEquals(inch,new QuantityMeasurement(QuantityMeasurementUnit.INCH, 1.0));
+    }
 }
