@@ -34,4 +34,10 @@ public class QuantityMeasurementTest {
     	QuantityMeasurement inch = new QuantityMeasurement(QuantityMeasurementUnit.INCH, 0.0);
         Assert.assertNotEquals(inch,new QuantityMeasurement(QuantityMeasurementUnit.INCH, 1.0));
     }
+    
+    @Test
+    public void whenGiven0FeetAnd0Inch_shouldReturnEquals() {
+    	QuantityMeasurement feet = new QuantityMeasurement(QuantityMeasurementUnit.FEET,0.0);
+        Assert.assertEquals(feet, new QuantityMeasurement(QuantityMeasurementUnit.INCH,0.0));
+    }
 }
